@@ -1,10 +1,18 @@
+import { useState } from 'react';
 import './Header.css';
 
 export default function Header() {
+    const [time, setTime] = useState(new Date().toLocaleTimeString());
+    setInterval(() => {
+        setTime(new Date().toLocaleTimeString());
+    }, 1000);
+
     return (
         <div className='Header'>
-            <h3>오늘은🗓️</h3>
-            <h1>{new Date().toDateString()}</h1>
+            <h1>
+                {new Date().toDateString()}
+                {` ${time}`}
+            </h1>
         </div>
     );
 }

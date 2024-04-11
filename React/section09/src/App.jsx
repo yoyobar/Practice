@@ -12,19 +12,36 @@ function reducer(state, action) {
             return state.map((item) => (item.id === action.targetId ? { ...item, isDone: !item.isDone } : item));
         case 'DELETE':
             return state.filter((item) => item.id !== action.targetId);
+        case 'RELOAD':
+            return action.data;
         default:
             return state;
     }
 }
 function App() {
-    const [todos, dispatch] = useReducer(reducer, [
-        {
-            id: new Date().getTime(),
-            isDone: false,
-            content: '예시',
-            date: new Date().getTime(),
-        },
-    ]);
+    const [todos, dispatch] = useReducer(reducer, [{}]);
+    const loaded = useRef(false);
+
+    //localStorage 저장
+    useEffect(() => {
+        if (loaded.current) {
+            const saveData = JSON.stringify(todos);
+            localStorage.setItem('todo', saveData);
+            return;
+        }
+        loaded.current = true;
+    }, [todos]);
+
+    //localStorage 불러오기
+    useEffect(() => {
+        const loadData = JSON.parse(localStorage.getItem('todo'));
+        if (loadData) {
+            dispatch({
+                type: 'RELOAD',
+                data: loadData,
+            });
+        }
+    }, []);
 
     const onCreate = (content) => {
         dispatch({

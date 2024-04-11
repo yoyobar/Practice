@@ -1,3 +1,7 @@
 .Header > h1 {
     color: rgb(37, 147, 255);
+    background-color: ghostwhite;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 10px;
 }
