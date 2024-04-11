@@ -1,0 +1,53 @@
+body {
+    padding: 20px;
+}
+
+.App {
+    margin: auto;
+    width: 400px;
+}
+
+.App > section {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.button-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3) {
+    background-color: tomato;
+}
+button:nth-child(4) {
+    background-color: forestgreen;
+}
+button:nth-child(5),
+button:nth-child(6),
+button:nth-child(7) {
+    background-color: cornflowerblue;
+}
+button:hover {
+    background-color: dimgray;
+}
+
+.count {
+    padding: 0.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
