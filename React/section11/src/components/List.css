@@ -1,0 +1,39 @@
+.List {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.List > h4 {
+    font-size: 2rem;
+    text-align: center;
+    background-color: darkslategrey;
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.List > input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    padding: 15px 10px;
+}
+
+.List > input:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(37, 147, 255);
+}
+
+.List .todo-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.count-wrapper > div {
+    margin: 5px;
+    width: 80px;
+    background-color: ghostwhite;
+    border-radius: 10px;
+    padding: 0.2rem;
+    color: rgb(37, 147, 255);
+}
