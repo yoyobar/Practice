@@ -22,6 +22,7 @@ function reducer(state, action) {
 
 //context
 export const TodoStateContext = createContext();
+//메모이제이션 context
 export const TodoDispatchContext = createContext();
 
 function App() {
