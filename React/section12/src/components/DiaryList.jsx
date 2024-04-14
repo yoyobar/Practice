@@ -1,28 +1,28 @@
-import Button from './Button'
-import DiaryItem from './DiaryItem'
-import './DiaryList.css'
-import {useNavigate} from 'react-router-dom'
-import {useState} from 'react'
-// text, type, onClick
+import Button from './Button';
+import DiaryItem from './DiaryItem';
+import './DiaryList.css';
+import {useNavigate} from 'react-router-dom';
+import {useState} from 'react';
+
 const DiaryList = ({data}) => {
-    const [sortType, setSortType] = useState('latest')
+    const [sortType, setSortType] = useState('latest');
 
     const onChangeSortType = (e) => {
-        setSortType(e.target.value)
-    }
+        setSortType(e.target.value);
+    };
 
     const getSortedData = () => {
         return data.toSorted((a, b) => {
             if (sortType === 'oldest') {
-                return Number(a.createDate) - Number(b.createDate) //오름
+                return Number(a.createDate) - Number(b.createDate); //오름
             }
             if (sortType === 'latest') {
-                return Number(b.createDate) - Number(a.createDate) //내림
+                return Number(b.createDate) - Number(a.createDate); //내림
             }
-        })
-    }
-    const sortedData = getSortedData()
-    const nav = useNavigate()
+        });
+    };
+    const sortedData = getSortedData();
+    const nav = useNavigate();
 
     return (
         <div className="DiaryList">
@@ -39,6 +39,6 @@ const DiaryList = ({data}) => {
                 ))}
             </div>
         </div>
-    )
-}
-export default DiaryList
+    );
+};
+export default DiaryList;

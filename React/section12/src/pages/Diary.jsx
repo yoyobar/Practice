@@ -3,18 +3,19 @@ import Header from '../components/Header';
 import Button from '../components/Button';
 import Viewer from '../components/Viewer';
 import useDiary from '../hooks/useDiary';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Diary = () => {
     const nav = useNavigate();
     const params = useParams();
     const curDiaryItem = useDiary(params.id);
+    usePageTitle(`${params.id}번 째 일기`);
 
     if (!curDiaryItem) {
         return <div>데이터 로딩중...</div>;
     }
 
     const {createDate, emotionId, content} = curDiaryItem;
-
     const date = {
         year: String(new Date(createDate).getFullYear()),
         month: String(new Date(createDate).getMonth() + 1).padStart(2, '0'),
