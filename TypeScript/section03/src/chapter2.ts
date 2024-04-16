@@ -55,3 +55,14 @@ function anyExam() {
     //neverVar = anyVar;
     //never는 공집합이므로 불가능
 }
+
+type Person = {
+    name: string;
+    id: number;
+};
+
+let user1: Person = {
+    name: '김민수',
+    id: 13,
+    skill: null, //X, 문법통과 불가능
+} as Person;

@@ -31,3 +31,31 @@ const user3 = {
 };
 
 console.log(user1, user2, user3);
+
+type Administor = {
+    role: 'ADMIN';
+    name: string;
+};
+type User = {
+    role: 'USER';
+    name: string;
+};
+type Guest = {
+    role: 'GUEST';
+    name: null;
+};
+type Info = Administor | User | Guest;
+
+function userInfo(user: Info) {
+    switch (user.role) {
+        case 'ADMIN':
+            console.log('A');
+            break;
+        case 'USER':
+            console.log('A');
+            break;
+        case 'GUEST':
+            console.log('A');
+            break;
+    }
+}

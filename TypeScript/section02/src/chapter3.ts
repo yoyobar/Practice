@@ -17,3 +17,8 @@ let config: {
 } = {
     apiKey: 'MY API KEY',
 };
+
+type User = {
+    id?: number;
+    name: string;
+};
