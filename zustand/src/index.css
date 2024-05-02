@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+body,
+html {
+    margin: 5rem 10rem;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(42, 36, 61);
+    filter: contrast(95%);
+}

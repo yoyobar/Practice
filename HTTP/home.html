@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        body,
+        html {
+            margin: auto;
+        }
+        nav input {
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        nav {
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            padding: 10px;
+        }
+        article {
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        article button {
+            background-color: rgb(73, 65, 63);
+            border: none;
+            border-radius: 5px;
+            width: 20%;
+            height: 40px;
+            color: white;
+            cursor: pointer;
+        }
+        article button:hover {
+            filter: brightness(70%);
+        }
+    </style>
+    <body>
+        <nav>
+            <div>ID</div>
+            <input id="idInput" type="number" />
+        </nav>
+        <nav>
+            <div>NAME</div>
+            <input autocomplete="off" id="nameInput" type="text" />
+        </nav>
+        <article>
+            <button id="submit">제출</button>
+            <button id="delete">삭제</button>
+            <button id="view">조회</button>
+        </article>
+    </body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</html>

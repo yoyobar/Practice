@@ -9,7 +9,8 @@ let arr1 = [
     { name: '김효빈', hobby: '테니스' },
 ];
 
-let tennisFilter = arr1.filter((item) => item.hobby === '테니스');
+let tennisFilter = arr1.filter((item) => item.hobby !== '테니스');
+//? true를 반환하는것만 따로 배열로 만들어서 반환하다.
 
 //2. map
 // 배열의 모든 요소를 순회하며, 각각 콜백함수를 실행하고, 결과값을 새로운 배열로 반환
