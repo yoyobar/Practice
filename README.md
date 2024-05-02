@@ -2,6 +2,7 @@
 </a><br>
 # inflearnSlice
 인프런 강의 `한입으로 잘라먹는 React` 와 `한입으로 잘라먹는 TypeScript` 스터디 기록용 레포지토리 입니다.
+그외 개인적으로 진행하는 대부분의 학습 내용을 기록합니다.
 
 
 | Project      | Repository                                                                                               | 과제 명                                          | 수정 날짜 |
