@@ -42,7 +42,7 @@ const Todo = () => {
 
     return (
         <div className='w-full h-[800px] mr-2 flex overflow-y-scroll scroll flex-col bg-slate-400 shadow-black shadow-md p-10'>
-            <h1 className='text-center select-none text-2xl font-mono mb-2'>TODO LIST</h1>
+            <h1 className='text-center select-none text-2xl font-mono mb-2'>TO DO LIST</h1>
             <form name='add' onSubmit={changeHandler} className='flex justify-between gap-4 ml-10 mr-10 mb-10'>
                 <input className='bg-slate-50 rounded-md pl-2 pr-2 flex-grow' name='input' value={input} onChange={changeHandler}></input>
                 <button className='bg-red-400 select-none hover:bg-red-500 transition rounded-md p-2 font-mono text-white' name='add'>

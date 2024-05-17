@@ -15,8 +15,8 @@
 // });
 
 //비동기의 데이터를 이용하고자한다면, 콜백으로 가져와서 처리할 수 있겠다.
-//1. 매개변수로 콜백함수를 넣는다
-//2. 콜백함수를 호출하고, 인수로 결과값을 전달한다.
+//!1. 매개변수로 콜백함수를 넣는다.
+//!2. 콜백함수를 호출하고, 인수로 결과값을 전달한다.
 function orderFood(callback) {
     setTimeout(() => {
         const food = '제육볶음';
@@ -36,14 +36,14 @@ function freezeFood(food, callback) {
     }, 1500);
 }
 
-//콜백 지옥
-
-orderFood((food) => {
-    console.log(food);
-    coolDownFood(food, (coolFood) => {
-        console.log(coolFood);
-        freezeFood(coolFood, (freezeFood) => {
-            console.log(freezeFood);
+//? 콜백함수
+//? 내가 처리하고 데이터를줄테니까 너가해라
+orderFood((data) => {
+    console.log(data);
+    coolDownFood(data, (coolData) => {
+        console.log(coolData);
+        freezeFood(coolData, (freezeData) => {
+            console.log(freezeData);
         });
     });
 });
